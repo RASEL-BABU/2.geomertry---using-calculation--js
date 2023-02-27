@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="fantasy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Assignment</title>
+</head>
+<!-- Navbar section -->
+
+<body>
+    <header class="bg-green-100">
+        <section class="px-12 ">
+
+    <div class="navbar ">
+        <div class="flex-1">
+          <h1 class="text-4xl">Interactive<br>Geometry Genius</h1>
+        </div>
+        
+            
+              <div class="w-10 rounded-full mr-5">
+               
+
+                <button onclick="myFunction()"  class="btn btn-primary px-5" id="btn-blog" >Blog</button>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+</section>
+<!-- card design -->
+
+<main>
+
+  <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+    <div class= "cart-details w-full grid md:grid-cols-2 lg:grid-cols-3 md:w-[60%] lg:w-[60%]  mt-5  g-4">
+
+    <div class="card w-full bg-base-100 shadow-xl"onmouseenter="changeBackground(this)" onmouseleave = "resetBackground(this)">
+      <figure class="px-10 pt-10">
+        <img src="./images/triangle.png" alt="" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title" id="triangle">Triangle</h2>
+        <p>Area(A)=0.5×a×h</p>
+        <input id= "first-input" type="text"class="bg-amber-100 text-center" placeholder="a">cm
+        
+        <input id="second-input" type="text"class="bg-amber-100 text-center" placeholder="h">cm
+        <div class="card-actions">
+          <button class="btn btn-success hover:bg-rose-900  px-12" id="btn1">Calculate</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl" onmouseenter="changeBackground(this)" onmouseleave="resetBackground(this)">
+      <figure class="px-10 pt-10">
+        <img src="./images/rectangle.png" alt="rectangle" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title" id="rectangle">Rectangle</h2>
+        <p>Area(A)=W×l</p>
+        <input type="text"class="bg-amber-100 text-center" placeholder="w" id="first-input2">cm
+        
+        <input type="text"class="bg-amber-100 text-center" placeholder="l" id="second-input2">cm
+
+
+        <div class="card-actions">
+          <button class="btn btn-success hover:bg-rose-900  px-12" id="btn2">Calculate</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl" onmouseenter="changeBackground(this)" onmouseleave="resetBackground(this)">
+      <figure class="px-10 pt-10">
+        <img src="./images/parallelogram.png" alt="" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title" id="parallegram">Parallelogram</h2>
+        <p>Area (A) = b× h</p>
+        <input type="text"class="bg-amber-100  text-center" id="first-input3" placeholder="b">cm
+        
+        <input type="text"class="bg-amber-100  text-center" id="second-input3" placeholder="h">cm
+        <div class="card-actions">
+          <button class="btn btn-success hover:bg-rose-900  px-12"id="btn-3">Calculate</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl" onmouseenter="changeBackground(this)" onmouseleave="resetBackground(this)">
+      <figure class="px-10 pt-10">
+        <img src="./images/rhombus.png" alt="" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title"id="rhombus">Rhombos</h2>
+        <p>Area(A)=0.5×d1×d2</p>
+        <input type="text"class="bg-amber-100  text-center" id="first-input4" placeholder="d1">cm
+        
+        <input type="text"class="bg-amber-100  text-center" id="second-input4" placeholder="d2">cm
+        <div class="card-actions">
+          <button class="btn btn-success hover:bg-rose-900  px-12" id="btn-4">Calculate</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl" onmouseenter="changeBackground(this)" onmouseleave="resetBackground(this)">
+      <figure class="px-10 pt-10">
+        <img src="./images/pentagon.png" alt="" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title"id="pentagon">Pentagon!</h2>
+        <p>Area(A)=0.5×p×b</p>
+        <input type="text"class="bg-amber-100  text-center" id="first-input5" placeholder="p">cm
+        
+        <input type="text"class="bg-amber-100  text-center" id="second-input5" placeholder="b">cm
+        <div class="card-actions">
+          <button class="btn btn-success hover:bg-rose-900  px-12" id="btn-5">Calculate</button>
+        </div>
+      </div>
+    </div>
+    <div class="card w-full bg-base-100 shadow-xl" onmouseenter="changeBackground(this)" onmouseleave="resetBackground(this)">
+      <figure class="px-10 pt-10">
+        <img src="./images/ellipse.png" alt="Shoes" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title" id="ellipse">Ellipse</h2>
+        <p>Area(A)=π×a×b</p>
+        <input type="text"class="bg-amber-100 text-center" id="first-input6">cm
+        
+        <input type="text"class="bg-amber-100 text-center" id="second-input6">cm
+        <div class="card-actions ">
+          <button class="btn btn-success hover:bg-rose-900 px-12"id="btn-6">Calculate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- table section -->
+  
+  <div class=" cart-details w-full md:w-[40%] lg:w-[35%] mx-auto">
+    <h1 class="text-3xl text-center font-bold underline mt-5">
+      Area Calculation:
+    </h1>
+
+    <div class="overflow-x-auto">
+      <table class="table w-full">
+        
+        <tbody class="mx-4"id="table-container">
+
+      
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </section>
+</main>
+   
+    
+
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
